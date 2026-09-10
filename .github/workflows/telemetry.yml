@@ -1,0 +1,54 @@
+name: telemetry
+
+# Regera assets/telemetry.svg e assets/activity.svg com dados reais da API do
+# GitHub. Existe porque os widgets de terceiros (github-readme-stats,
+# github-readme-activity-graph) sao deploys no Vercel e saem do ar.
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tools/build_telemetry.py
+      - tools/build_assets.py
+      - .github/workflows/telemetry.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telemetry
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Gera os SVGs de telemetria
+        env:
+          # TELEMETRY_TOKEN e opcional: so precisa se o token padrao nao
+          # devolver o calendario de contribuicoes.
+          TELEMETRY_TOKEN: ${{ secrets.TELEMETRY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_LOGIN: ${{ github.repository_owner }}
+        run: python tools/build_telemetry.py
+
+      - name: Commita se mudou
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/telemetry.svg assets/activity.svg assets/dark/telemetry.svg assets/dark/activity.svg
+          if git diff --staged --quiet; then
+            echo "telemetria sem mudanca"
+          else
+            git commit -m "Atualiza telemetria [skip ci]"
+            git push
+          fi

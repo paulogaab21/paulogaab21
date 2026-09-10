@@ -32,10 +32,9 @@
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=paulogaab21&show_icons=true&hide_border=true&bg_color=00000000&title_color=dddddd&text_color=999999&icon_color=aaaaaa"/><img src="https://github-readme-stats.vercel.app/api?username=paulogaab21&show_icons=true&hide_border=true&bg_color=00000000&title_color=444444&text_color=666666&icon_color=555555" width="48%" alt="GitHub statistics"/></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=paulogaab21&layout=compact&hide_border=true&bg_color=00000000&title_color=dddddd&text_color=999999"/><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=paulogaab21&layout=compact&hide_border=true&bg_color=00000000&title_color=444444&text_color=666666" width="40%" alt="Most used languages"/></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/telemetry.svg"/><img src="assets/telemetry.svg" alt="GitHub statistics and language breakdown"/></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=paulogaab21&bg_color=00000000&color=ffffff&line=ffffff&point=ffffff&area_color=ffffff&area=true&hide_border=true&radius=0&custom_title=CONTRIBUTION%20TELEMETRY"/><img src="https://github-readme-activity-graph.vercel.app/graph?username=paulogaab21&bg_color=00000000&color=000000&line=000000&point=000000&area_color=000000&area=true&hide_border=true&radius=0&custom_title=CONTRIBUTION%20TELEMETRY" width="97%" alt="GitHub contribution activity"/></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/activity.svg"/><img src="assets/activity.svg" alt="Contribution activity"/></picture>
 
 </div>
 

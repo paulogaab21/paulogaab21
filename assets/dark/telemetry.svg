@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1000 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub statistics and language breakdown">
+  <style>
+    .mono { font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    /* Estado base = estado final. As animacoes entram com fill-mode backwards,
+       entao se nada animar (renderizador estatico, motion reduzido) o conteudo
+       aparece inteiro em vez de sumir. Uma curva so em tudo e escalonamento
+       curto: a secao inteira entra como uma onda, sem atraso no primeiro
+       quadro. */
+    .draw { stroke: #444444; stroke-width: 1; stroke-dasharray: 1000; stroke-dashoffset: 0; animation: d 1.5s cubic-bezier(.16,.84,.44,1) backwards; }
+    @keyframes d { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
+    .wire { stroke: #444444; stroke-width: 1; stroke-dasharray: 340; stroke-dashoffset: 0; animation: w 1.1s cubic-bezier(.16,.84,.44,1) .18s backwards; }
+    @keyframes w { from { stroke-dashoffset: 340; } to { stroke-dashoffset: 0; } }
+    .f { animation: f .9s cubic-bezier(.16,.84,.44,1) backwards; }
+    @keyframes f { from { opacity: 0; } to { opacity: 1; } }
+    .rise { animation: rise .85s cubic-bezier(.16,.84,.44,1) backwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    .a1{animation-delay:.06s} .a2{animation-delay:.12s} .a3{animation-delay:.18s} .a4{animation-delay:.24s}
+    .a5{animation-delay:.30s} .a6{animation-delay:.36s} .a7{animation-delay:.42s} .a8{animation-delay:.48s}
+    .dot { animation: p 2.6s ease-in-out infinite; }
+    @keyframes p { 0%,100% { opacity: 1 } 50% { opacity: .35 } }
+    .ring { opacity: 0; animation: r 2.6s cubic-bezier(.16,.84,.44,1) infinite; }
+    @keyframes r { 0% { transform: scale(.4); opacity: .8 } 80%,100% { transform: scale(2.6); opacity: 0 } }
+    @media (prefers-reduced-motion: reduce) {
+      .draw,.wire,.f,.rise,.dot,.ring { animation: none; }
+    }
+  </style>
+  <line x1="500" y1="18" x2="500" y2="196" stroke="#444444" stroke-width="1" opacity=".4"/>
+  <text class="mono f" x="48" y="24" font-size="11" letter-spacing="3" fill="#777777">STATS</text>
+  <text class="mono rise a1" x="48" y="56" font-size="14" fill="#DDDDDD">public repositories</text>
+  <text class="mono rise a1" x="452" y="56" font-size="14" fill="#FFFFFF" text-anchor="end">5</text>
+  <text class="mono rise a2" x="48" y="86" font-size="14" fill="#DDDDDD">stars earned</text>
+  <text class="mono rise a2" x="452" y="86" font-size="14" fill="#FFFFFF" text-anchor="end">18</text>
+  <text class="mono rise a3" x="48" y="116" font-size="14" fill="#DDDDDD">commits, last 12 months</text>
+  <text class="mono rise a3" x="452" y="116" font-size="14" fill="#FFFFFF" text-anchor="end">54</text>
+  <text class="mono rise a4" x="48" y="146" font-size="14" fill="#DDDDDD">pull requests</text>
+  <text class="mono rise a4" x="452" y="146" font-size="14" fill="#FFFFFF" text-anchor="end">3</text>
+  <text class="mono rise a5" x="48" y="176" font-size="14" fill="#DDDDDD">followers</text>
+  <text class="mono rise a5" x="452" y="176" font-size="14" fill="#FFFFFF" text-anchor="end">3</text>
+  <text class="mono f" x="540" y="24" font-size="11" letter-spacing="3" fill="#777777">LANGUAGES</text>
+  <text class="mono rise a1" x="540" y="56" font-size="14" fill="#DDDDDD">Python</text>
+  <text class="mono rise a1" x="952" y="56" font-size="12" fill="#666666" text-anchor="end">36.0%</text>
+  <rect x="540" y="64" width="412" height="3" fill="#1C1C1C"/>
+  <rect class="rise a1" x="540" y="64" width="148.2" height="3" fill="#AAAAAA"/>
+  <text class="mono rise a2" x="540" y="86" font-size="14" fill="#DDDDDD">C++</text>
+  <text class="mono rise a2" x="952" y="86" font-size="12" fill="#666666" text-anchor="end">16.4%</text>
+  <rect x="540" y="94" width="412" height="3" fill="#1C1C1C"/>
+  <rect class="rise a2" x="540" y="94" width="67.4" height="3" fill="#AAAAAA"/>
+  <text class="mono rise a3" x="540" y="116" font-size="14" fill="#DDDDDD">Go</text>
+  <text class="mono rise a3" x="952" y="116" font-size="12" fill="#666666" text-anchor="end">13.3%</text>
+  <rect x="540" y="124" width="412" height="3" fill="#1C1C1C"/>
+  <rect class="rise a3" x="540" y="124" width="54.9" height="3" fill="#AAAAAA"/>
+  <text class="mono rise a4" x="540" y="146" font-size="14" fill="#DDDDDD">C#</text>
+  <text class="mono rise a4" x="952" y="146" font-size="12" fill="#666666" text-anchor="end">11.9%</text>
+  <rect x="540" y="154" width="412" height="3" fill="#1C1C1C"/>
+  <rect class="rise a4" x="540" y="154" width="49.1" height="3" fill="#AAAAAA"/>
+  <text class="mono rise a5" x="540" y="176" font-size="14" fill="#DDDDDD">HTML</text>
+  <text class="mono rise a5" x="952" y="176" font-size="12" fill="#666666" text-anchor="end">7.1%</text>
+  <rect x="540" y="184" width="412" height="3" fill="#1C1C1C"/>
+  <rect class="rise a5" x="540" y="184" width="29.2" height="3" fill="#AAAAAA"/>
+</svg>
