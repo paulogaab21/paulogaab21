@@ -1,21 +1,25 @@
-<svg viewBox="0 0 1000 256" width="1000" height="256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technical stack">
+<svg viewBox="0 0 1000 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technical stack">
   <style>
     .mono { font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
-    .draw { stroke: #444444; stroke-width: 1; stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: d 1.4s cubic-bezier(.6,0,.2,1) .2s forwards; }
-    @keyframes d { to { stroke-dashoffset: 0; } }
-    .f { opacity: 0; animation: f .8s ease .1s forwards; }
-    @keyframes f { to { opacity: 1; } }
-    .rise { opacity: 0; animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    /* Estado base = estado final. As animacoes entram com fill-mode backwards,
+       entao se nada animar (renderizador estatico, motion reduzido) o conteudo
+       aparece inteiro em vez de sumir. */
+    .draw { stroke: #444444; stroke-width: 1; stroke-dasharray: 1000; stroke-dashoffset: 0; animation: d 1.4s cubic-bezier(.6,0,.2,1) .2s backwards; }
+    @keyframes d { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
+    .wire { stroke: #444444; stroke-width: 1; stroke-dasharray: 340; stroke-dashoffset: 0; animation: w 1.2s ease .3s backwards; }
+    @keyframes w { from { stroke-dashoffset: 340; } to { stroke-dashoffset: 0; } }
+    .f { animation: f .8s ease .1s backwards; }
+    @keyframes f { from { opacity: 0; } to { opacity: 1; } }
+    .rise { animation: rise .7s cubic-bezier(.2,.7,.2,1) backwards; }
     @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
     .a1{animation-delay:.10s} .a2{animation-delay:.20s} .a3{animation-delay:.32s} .a4{animation-delay:.44s}
     .a5{animation-delay:.56s} .a6{animation-delay:.68s} .a7{animation-delay:.80s} .a8{animation-delay:.92s}
     .dot { animation: p 2.4s ease-in-out infinite; }
     @keyframes p { 0%,100% { opacity: 1 } 50% { opacity: .35 } }
-    .ring { animation: r 2.4s ease-out infinite; }
+    .ring { opacity: 0; animation: r 2.4s ease-out infinite; }
     @keyframes r { 0% { transform: scale(.4); opacity: .8 } 80%,100% { transform: scale(2.6); opacity: 0 } }
     @media (prefers-reduced-motion: reduce) {
-      .draw,.f,.rise,.dot,.ring { animation: none; }
-      .draw { stroke-dashoffset: 0; } .f,.rise { opacity: 1; } .ring { opacity: 0; }
+      .draw,.wire,.f,.rise,.dot,.ring { animation: none; }
     }
   </style>
   <line x1="178" y1="8" x2="178" y2="248" stroke="#444444" stroke-width="1" opacity=".4"/>

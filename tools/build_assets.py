@@ -3,7 +3,7 @@
 import io
 import os
 
-ROOT = r"C:\Users\Gabriel\projects\paulogaab21"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 THEMES = {
     "light": {
@@ -20,21 +20,25 @@ MONO = 'ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation 
 
 STYLE = """  <style>
     .mono { font-family: %s; }
-    .draw { stroke: {RULE}; stroke-width: 1; stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: d 1.4s cubic-bezier(.6,0,.2,1) .2s forwards; }
-    @keyframes d { to { stroke-dashoffset: 0; } }
-    .f { opacity: 0; animation: f .8s ease .1s forwards; }
-    @keyframes f { to { opacity: 1; } }
-    .rise { opacity: 0; animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    /* Estado base = estado final. As animacoes entram com fill-mode backwards,
+       entao se nada animar (renderizador estatico, motion reduzido) o conteudo
+       aparece inteiro em vez de sumir. */
+    .draw { stroke: {RULE}; stroke-width: 1; stroke-dasharray: 1000; stroke-dashoffset: 0; animation: d 1.4s cubic-bezier(.6,0,.2,1) .2s backwards; }
+    @keyframes d { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
+    .wire { stroke: {RULE}; stroke-width: 1; stroke-dasharray: 340; stroke-dashoffset: 0; animation: w 1.2s ease .3s backwards; }
+    @keyframes w { from { stroke-dashoffset: 340; } to { stroke-dashoffset: 0; } }
+    .f { animation: f .8s ease .1s backwards; }
+    @keyframes f { from { opacity: 0; } to { opacity: 1; } }
+    .rise { animation: rise .7s cubic-bezier(.2,.7,.2,1) backwards; }
     @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
     .a1{animation-delay:.10s} .a2{animation-delay:.20s} .a3{animation-delay:.32s} .a4{animation-delay:.44s}
     .a5{animation-delay:.56s} .a6{animation-delay:.68s} .a7{animation-delay:.80s} .a8{animation-delay:.92s}
     .dot { animation: p 2.4s ease-in-out infinite; }
     @keyframes p { 0%%,100%% { opacity: 1 } 50%% { opacity: .35 } }
-    .ring { animation: r 2.4s ease-out infinite; }
+    .ring { opacity: 0; animation: r 2.4s ease-out infinite; }
     @keyframes r { 0%% { transform: scale(.4); opacity: .8 } 80%%,100%% { transform: scale(2.6); opacity: 0 } }
     @media (prefers-reduced-motion: reduce) {
-      .draw,.f,.rise,.dot,.ring { animation: none; }
-      .draw { stroke-dashoffset: 0; } .f,.rise { opacity: 1; } .ring { opacity: 0; }
+      .draw,.wire,.f,.rise,.dot,.ring { animation: none; }
     }
   </style>
 """ % MONO
@@ -42,9 +46,9 @@ STYLE = """  <style>
 
 def svg(name, w, h, label, body):
     return (
-        '<svg viewBox="0 0 %d %d" width="%d" height="%d" fill="none" '
+        '<svg viewBox="0 0 %d %d" fill="none" '
         'xmlns="http://www.w3.org/2000/svg" role="img" aria-label="%s">\n%s%s</svg>\n'
-        % (w, h, w, h, label, STYLE, body)
+        % (w, h, label, STYLE, body)
     )
 
 
@@ -61,7 +65,7 @@ def header():
     b += txt(500, 40, 11, "{MUTED}", "PAULOGAAB21", "rise a1", ls=6, anchor="middle")
     b += txt(500, 112, 46, "{INK}", "PAULO GABRIEL", "rise a2", ls=4, anchor="middle")
     b += txt(500, 164, 46, "{INK}", "DA SILVA", "rise a3", ls=4, anchor="middle")
-    b += '  <line class="draw" x1="340" y1="192" x2="660" y2="192" stroke-dasharray="320" stroke-dashoffset="320"/>\n'
+    b += '  <line class="draw" x1="340" y1="192" x2="660" y2="192"/>\n'
     b += txt(500, 224, 13, "{MUTED}", "BACKEND / FULL STACK DEVELOPER · JUNDIA&#205;, BRAZIL", "rise a5", ls=3, anchor="middle")
     return svg("header-v1", 1000, 244, "Paulo Gabriel da Silva - backend and full stack developer", b)
 
@@ -117,13 +121,15 @@ def ecosystem():
         (385, 14, "Fable2Recomp", "C++ &#183; contributor", "a6"),
         (385, 286, "reblue-ptbr-fix", "C++ &#183; 360 texture formats", "a7"),
     ]
+    # os fios saem da borda da caixa central e param na borda de cada no,
+    # nunca por cima do texto
     wires = [
-        "M500 170 L211 82", "M500 170 L211 262", "M500 170 L789 82",
-        "M500 170 L789 262", "M500 170 L500 36", "M500 170 L500 308",
+        "M430 163 L326 82", "M430 177 L326 262", "M570 163 L674 82",
+        "M570 177 L674 262", "M500 145 L500 58", "M500 195 L500 286",
     ]
     b = "  <g>\n"
     for d in wires:
-        b += ('    <path class="draw" d="%s" stroke-dasharray="340" stroke-dashoffset="340"/>\n' % d)
+        b += ('    <path class="wire" d="%s"/>\n' % d)
     b += "  </g>\n"
     b += '  <g class="f a1">\n'
     b += '    <rect x="430" y="145" width="140" height="50" fill="none" stroke="{ACCENT}" stroke-width="1"/>\n'
