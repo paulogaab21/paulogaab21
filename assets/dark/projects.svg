@@ -1,0 +1,57 @@
+<svg viewBox="0 0 1000 510" width="1000" height="510" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Featured projects">
+  <style>
+    .mono { font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .draw { stroke: #444444; stroke-width: 1; stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: d 1.4s cubic-bezier(.6,0,.2,1) .2s forwards; }
+    @keyframes d { to { stroke-dashoffset: 0; } }
+    .f { opacity: 0; animation: f .8s ease .1s forwards; }
+    @keyframes f { to { opacity: 1; } }
+    .rise { opacity: 0; animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .a1{animation-delay:.10s} .a2{animation-delay:.20s} .a3{animation-delay:.32s} .a4{animation-delay:.44s}
+    .a5{animation-delay:.56s} .a6{animation-delay:.68s} .a7{animation-delay:.80s} .a8{animation-delay:.92s}
+    .dot { animation: p 2.4s ease-in-out infinite; }
+    @keyframes p { 0%,100% { opacity: 1 } 50% { opacity: .35 } }
+    .ring { animation: r 2.4s ease-out infinite; }
+    @keyframes r { 0% { transform: scale(.4); opacity: .8 } 80%,100% { transform: scale(2.6); opacity: 0 } }
+    @media (prefers-reduced-motion: reduce) {
+      .draw,.f,.rise,.dot,.ring { animation: none; }
+      .draw { stroke-dashoffset: 0; } .f,.rise { opacity: 1; } .ring { opacity: 0; }
+    }
+  </style>
+  <text class="mono rise a1" x="48" y="26" font-size="14" fill="#FFFFFF">IACoreX</text>
+  <text class="mono rise a1" x="220" y="26" font-size="14" fill="#DDDDDD">Live AI-assisted customer support app &#8212; automated replies, scheduling,</text>
+  <text class="mono rise a1" x="952" y="26" font-size="11" letter-spacing="2" fill="#777777" text-anchor="end">iacorex.com</text>
+  <text class="mono rise a1" x="220" y="46" font-size="14" fill="#DDDDDD">unified inbox and an analytics panel.</text>
+  <text class="mono rise a1" x="220" y="68" font-size="11" letter-spacing="1" fill="#666666">RAILS &#183; PUMA &#183; SIDEKIQ &#183; POSTGRESQL &#183; VUE &#183; VITE &#183; TS</text>
+  <line x1="48" y1="84" x2="952" y2="84" stroke="#1C1C1C" stroke-width="1"/>
+  <text class="mono rise a2" x="48" y="106" font-size="14" fill="#FFFFFF">MiPaciente</text>
+  <text class="mono rise a2" x="220" y="106" font-size="14" fill="#DDDDDD">Clinical paperwork by link: intake forms, consent terms, contracts and</text>
+  <text class="mono rise a2" x="952" y="106" font-size="11" letter-spacing="2" fill="#777777" text-anchor="end">mipaciente.com.br</text>
+  <text class="mono rise a2" x="220" y="126" font-size="14" fill="#DDDDDD">progress notes.</text>
+  <text class="mono rise a2" x="220" y="148" font-size="11" letter-spacing="1" fill="#666666">RAILS &#183; POSTGRESQL &#183; SIDEKIQ &#183; VUE &#183; VITE &#183; TS</text>
+  <line x1="48" y1="164" x2="952" y2="164" stroke="#1C1C1C" stroke-width="1"/>
+  <text class="mono rise a3" x="48" y="186" font-size="14" fill="#FFFFFF">ufc3recomp</text>
+  <text class="mono rise a3" x="220" y="186" font-size="14" fill="#DDDDDD">Xbox 360&#8217;s UFC Undisputed 3 recompiled for PC. Not emulation: the PowerPC</text>
+  <text class="mono rise a3" x="952" y="186" font-size="11" letter-spacing="2" fill="#777777" text-anchor="end">v1.0.2</text>
+  <text class="mono rise a3" x="220" y="206" font-size="14" fill="#DDDDDD">binary becomes C++ and compiles into a native .exe. Playable at 2K.</text>
+  <text class="mono rise a3" x="220" y="228" font-size="11" letter-spacing="1" fill="#666666">C++ &#183; PYTHON &#183; CMAKE &#183; GHIDRA</text>
+  <line x1="48" y1="244" x2="952" y2="244" stroke="#1C1C1C" stroke-width="1"/>
+  <text class="mono rise a4" x="48" y="266" font-size="14" fill="#FFFFFF">NotiGO</text>
+  <text class="mono rise a4" x="220" y="266" font-size="14" fill="#DDDDDD">HTTP/JSON API in Go that ingests events from seven services into one</text>
+  <text class="mono rise a4" x="952" y="266" font-size="11" letter-spacing="2" fill="#777777" text-anchor="end">academic</text>
+  <text class="mono rise a4" x="220" y="286" font-size="14" fill="#DDDDDD">notification hub. Per-source idempotency, filtering, pagination, append-only.</text>
+  <text class="mono rise a4" x="220" y="308" font-size="11" letter-spacing="1" fill="#666666">GO &#183; REST &#183; SOA &#183; JSONL</text>
+  <line x1="48" y1="324" x2="952" y2="324" stroke="#1C1C1C" stroke-width="1"/>
+  <text class="mono rise a5" x="48" y="346" font-size="14" fill="#FFFFFF">reblue-ptbr-fix</text>
+  <text class="mono rise a5" x="220" y="346" font-size="14" fill="#DDDDDD">Installs the PT-BR Blue Dragon translation into re:Blue and kills the</text>
+  <text class="mono rise a5" x="952" y="346" font-size="11" letter-spacing="2" fill="#777777" text-anchor="end">tool</text>
+  <text class="mono rise a5" x="220" y="366" font-size="14" fill="#DDDDDD">ACCESS_VIOLATION it caused, converting 27 textures to the 360 format.</text>
+  <text class="mono rise a5" x="220" y="388" font-size="11" letter-spacing="1" fill="#666666">C++ &#183; TEXTURE FORMATS</text>
+  <line x1="48" y1="404" x2="952" y2="404" stroke="#1C1C1C" stroke-width="1"/>
+  <text class="mono rise a6" x="48" y="426" font-size="14" fill="#FFFFFF">Fable2Recomp</text>
+  <text class="mono rise a6" x="220" y="426" font-size="14" fill="#DDDDDD">Fable II ported to Windows and Linux through the same static recompilation</text>
+  <text class="mono rise a6" x="952" y="426" font-size="11" letter-spacing="2" fill="#777777" text-anchor="end">contributor</text>
+  <text class="mono rise a6" x="220" y="446" font-size="14" fill="#DDDDDD">route. Group effort, in progress.</text>
+  <text class="mono rise a6" x="220" y="468" font-size="11" letter-spacing="1" fill="#666666">C++ &#183; REXGLUE SDK</text>
+  <line x1="48" y1="484" x2="952" y2="484" stroke="#1C1C1C" stroke-width="1"/>
+</svg>

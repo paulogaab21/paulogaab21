@@ -1,0 +1,31 @@
+<svg viewBox="0 0 1000 210" width="1000" height="210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="whoami - bio, focus, status">
+  <style>
+    .mono { font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .draw { stroke: #C0C0C0; stroke-width: 1; stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: d 1.4s cubic-bezier(.6,0,.2,1) .2s forwards; }
+    @keyframes d { to { stroke-dashoffset: 0; } }
+    .f { opacity: 0; animation: f .8s ease .1s forwards; }
+    @keyframes f { to { opacity: 1; } }
+    .rise { opacity: 0; animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .a1{animation-delay:.10s} .a2{animation-delay:.20s} .a3{animation-delay:.32s} .a4{animation-delay:.44s}
+    .a5{animation-delay:.56s} .a6{animation-delay:.68s} .a7{animation-delay:.80s} .a8{animation-delay:.92s}
+    .dot { animation: p 2.4s ease-in-out infinite; }
+    @keyframes p { 0%,100% { opacity: 1 } 50% { opacity: .35 } }
+    .ring { animation: r 2.4s ease-out infinite; }
+    @keyframes r { 0% { transform: scale(.4); opacity: .8 } 80%,100% { transform: scale(2.6); opacity: 0 } }
+    @media (prefers-reduced-motion: reduce) {
+      .draw,.f,.rise,.dot,.ring { animation: none; }
+      .draw { stroke-dashoffset: 0; } .f,.rise { opacity: 1; } .ring { opacity: 0; }
+    }
+  </style>
+  <text class="mono rise a1" x="48" y="32" font-size="16" fill="#444444">fourth-semester software engineering student, graduating september 2027.</text>
+  <text class="mono rise a2" x="48" y="60" font-size="16" fill="#444444">building across the full stack &#8212; Ruby on Rails &#183; Vue.js &#183; TypeScript &#183; PostgreSQL &#183; Docker.</text>
+  <text class="mono rise a3" x="48" y="92" font-size="15" fill="#888888">off hours I go down to the metal: Xbox 360 PowerPC executables translated to C++</text>
+  <text class="mono rise a4" x="48" y="116" font-size="15" fill="#888888">and recompiled to run natively on PC. no emulator in the middle.</text>
+  <text class="mono rise a5" x="48" y="148" font-size="15" fill="#888888">before code, I supervised a store and its team at Drogasil &#8212; priorities, deadlines, people.</text>
+  <g class="f a6" style="transform-origin: 54px 186px">
+    <circle class="ring" cx="54" cy="186" r="5" fill="none" stroke="#555555" stroke-width="1" style="transform-origin: 54px 186px"/>
+    <circle class="dot" cx="54" cy="186" r="4" fill="#555555"/>
+  </g>
+  <text class="mono rise a6" x="76" y="190" font-size="12" letter-spacing="3" fill="#444444">OPEN TO JUNIOR ROLES</text>
+</svg>
