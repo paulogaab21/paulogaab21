@@ -114,27 +114,26 @@ def whoami():
 # ---------------------------------------------------------------- ecosystem
 def ecosystem():
     nodes = [
-        (96, 60, "IACoreX", "Rails &#183; Vue &#183; Sidekiq &#183; live", "a3"),
-        (96, 240, "MiPaciente", "Rails &#183; Vue &#183; PostgreSQL", "a4"),
-        (674, 60, "ufc3recomp", "C++ &#183; PowerPC &#8594; x86-64", "a5"),
-        (674, 240, "NotiGO", "Go &#183; HTTP/JSON API", "a6"),
-        (385, 14, "Fable2Recomp", "C++ &#183; contributor", "a6"),
-        (385, 286, "reblue-ptbr-fix", "C++ &#183; 360 texture formats", "a7"),
+        (96, 40, "IACoreX", "Rails &#183; Vue &#183; Sidekiq &#183; live", "a3"),
+        (96, 190, "MiPaciente", "Rails &#183; Vue &#183; PostgreSQL", "a4"),
+        (674, 40, "ufc3recomp", "C++ &#183; PowerPC &#8594; x86-64", "a5"),
+        (674, 190, "NotiGO", "Go &#183; HTTP/JSON API", "a6"),
+        (385, 246, "reblue-ptbr-fix", "C++ &#183; 360 texture formats", "a7"),
     ]
     # os fios saem da borda da caixa central e param na borda de cada no,
     # nunca por cima do texto
     wires = [
-        "M430 163 L326 82", "M430 177 L326 262", "M570 163 L674 82",
-        "M570 177 L674 262", "M500 145 L500 58", "M500 195 L500 286",
+        "M430 133 L326 62", "M430 147 L326 212", "M570 133 L674 62",
+        "M570 147 L674 212", "M500 165 L500 246",
     ]
     b = "  <g>\n"
     for d in wires:
         b += ('    <path class="wire" d="%s"/>\n' % d)
     b += "  </g>\n"
     b += '  <g class="f a1">\n'
-    b += '    <rect x="430" y="145" width="140" height="50" fill="none" stroke="{ACCENT}" stroke-width="1"/>\n'
-    b += "  " + txt(500, 168, 11, "{INK}", "PAULOGAAB21", ls=3, anchor="middle")
-    b += "  " + txt(500, 184, 10, "{MUTED}", "6 repositories", anchor="middle")
+    b += '    <rect x="430" y="115" width="140" height="50" fill="none" stroke="{ACCENT}" stroke-width="1"/>\n'
+    b += "  " + txt(500, 138, 11, "{INK}", "PAULOGAAB21", ls=3, anchor="middle")
+    b += "  " + txt(500, 154, 10, "{MUTED}", "5 repositories", anchor="middle")
     b += "  </g>\n"
     for x, y, name, sub, a in nodes:
         b += '  <g class="f %s">\n' % a
@@ -142,7 +141,7 @@ def ecosystem():
         b += "  " + txt(x + 14, y + 20, 12, "{BONE}", name)
         b += "  " + txt(x + 14, y + 35, 10, "{MUTED}", sub)
         b += "  </g>\n"
-    return svg("ecosystem", 1000, 340, "Project ecosystem map", b)
+    return svg("ecosystem", 1000, 300, "Project ecosystem map", b)
 
 
 # ---------------------------------------------------------------- projects
@@ -167,10 +166,6 @@ PROJECTS = [
      "Installs the PT-BR Blue Dragon translation into re:Blue and kills the",
      "ACCESS_VIOLATION it caused, converting 27 textures to the 360 format.",
      "C++ &#183; TEXTURE FORMATS"),
-    ("Fable2Recomp", "contributor",
-     "Fable II ported to Windows and Linux through the same static recompilation",
-     "route. Group effort, in progress.",
-     "C++ &#183; REXGLUE SDK"),
 ]
 
 
