@@ -24,7 +24,7 @@
 
 <div align="center">
 
-[iacorex.com](https://iacorex.com) &nbsp;·&nbsp; [mipaciente.com.br](https://mipaciente.com.br) &nbsp;·&nbsp; [ufc3recomp](https://github.com/paulogaab21/ufc3recomp) &nbsp;·&nbsp; [NotiGO](https://github.com/paulogaab21/NotiGO) &nbsp;·&nbsp; [reblue-ptbr-texture-fix](https://github.com/paulogaab21/reblue-ptbr-texture-fix)
+[iacorex.com](https://iacorex.com) &nbsp;·&nbsp; [mipaciente.com.br](https://mipaciente.com.br) &nbsp;·&nbsp; [NotiGO](https://github.com/paulogaab21/NotiGO)
 
 </div>
 
