@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1000 430" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Featured projects">
+<svg viewBox="0 0 1000 270" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Featured projects">
   <style>
     .mono { font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
     /* Estado base = estado final. As animacoes entram com fill-mode backwards,
@@ -36,22 +36,10 @@
   <text class="mono rise a2" x="220" y="126" font-size="14" fill="#444444">progress notes.</text>
   <text class="mono rise a2" x="220" y="148" font-size="11" letter-spacing="1" fill="#999999">RAILS &#183; POSTGRESQL &#183; SIDEKIQ &#183; VUE &#183; VITE &#183; TS</text>
   <line x1="48" y1="164" x2="952" y2="164" stroke="#E5E5E5" stroke-width="1"/>
-  <text class="mono rise a3" x="48" y="186" font-size="14" fill="#000000">ufc3recomp</text>
-  <text class="mono rise a3" x="220" y="186" font-size="14" fill="#444444">Xbox 360&#8217;s UFC Undisputed 3 recompiled for PC. Not emulation: the PowerPC</text>
-  <text class="mono rise a3" x="952" y="186" font-size="11" letter-spacing="2" fill="#888888" text-anchor="end">v1.0.2</text>
-  <text class="mono rise a3" x="220" y="206" font-size="14" fill="#444444">binary becomes C++ and compiles into a native .exe. Playable at 2K.</text>
-  <text class="mono rise a3" x="220" y="228" font-size="11" letter-spacing="1" fill="#999999">C++ &#183; PYTHON &#183; CMAKE &#183; GHIDRA</text>
+  <text class="mono rise a3" x="48" y="186" font-size="14" fill="#000000">NotiGO</text>
+  <text class="mono rise a3" x="220" y="186" font-size="14" fill="#444444">HTTP/JSON API in Go that ingests events from seven services into one</text>
+  <text class="mono rise a3" x="952" y="186" font-size="11" letter-spacing="2" fill="#888888" text-anchor="end">academic</text>
+  <text class="mono rise a3" x="220" y="206" font-size="14" fill="#444444">notification hub. Per-source idempotency, filtering, pagination, append-only.</text>
+  <text class="mono rise a3" x="220" y="228" font-size="11" letter-spacing="1" fill="#999999">GO &#183; REST &#183; SOA &#183; JSONL</text>
   <line x1="48" y1="244" x2="952" y2="244" stroke="#E5E5E5" stroke-width="1"/>
-  <text class="mono rise a4" x="48" y="266" font-size="14" fill="#000000">NotiGO</text>
-  <text class="mono rise a4" x="220" y="266" font-size="14" fill="#444444">HTTP/JSON API in Go that ingests events from seven services into one</text>
-  <text class="mono rise a4" x="952" y="266" font-size="11" letter-spacing="2" fill="#888888" text-anchor="end">academic</text>
-  <text class="mono rise a4" x="220" y="286" font-size="14" fill="#444444">notification hub. Per-source idempotency, filtering, pagination, append-only.</text>
-  <text class="mono rise a4" x="220" y="308" font-size="11" letter-spacing="1" fill="#999999">GO &#183; REST &#183; SOA &#183; JSONL</text>
-  <line x1="48" y1="324" x2="952" y2="324" stroke="#E5E5E5" stroke-width="1"/>
-  <text class="mono rise a5" x="48" y="346" font-size="14" fill="#000000">reblue-ptbr-fix</text>
-  <text class="mono rise a5" x="220" y="346" font-size="14" fill="#444444">Installs the PT-BR Blue Dragon translation into re:Blue and kills the</text>
-  <text class="mono rise a5" x="952" y="346" font-size="11" letter-spacing="2" fill="#888888" text-anchor="end">tool</text>
-  <text class="mono rise a5" x="220" y="366" font-size="14" fill="#444444">ACCESS_VIOLATION it caused, converting 27 textures to the 360 format.</text>
-  <text class="mono rise a5" x="220" y="388" font-size="11" letter-spacing="1" fill="#999999">C++ &#183; TEXTURE FORMATS</text>
-  <line x1="48" y1="404" x2="952" y2="404" stroke="#E5E5E5" stroke-width="1"/>
 </svg>
