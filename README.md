@@ -28,20 +28,7 @@
 
 </div>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s04.svg"/><img src="assets/s04.svg" alt="04 — telemetry"/></picture>
-
-<div align="center">
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/telemetry.svg"/><img src="assets/telemetry.svg" alt="GitHub statistics and language breakdown"/></picture>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/activity.svg"/><img src="assets/activity.svg" alt="Contribution activity"/></picture>
-
-</div>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s05.svg"/><img src="assets/s05.svg" alt="05 — the route"/></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/timeline.svg"/><img src="assets/timeline.svg" alt="Timeline and experience"/></picture>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s06.svg"/><img src="assets/s06.svg" alt="06 — stack"/></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/paulogaab21/paulogaab21/raw/db66a466017ecfc69e9848c5339521249b6ba013/assets/dark/s06.svg"/><img src="https://github.com/paulogaab21/paulogaab21/raw/db66a466017ecfc69e9848c5339521249b6ba013/assets/s06.svg" alt="04 — stack"/></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/stack.svg"/><img src="assets/stack.svg" alt="Technical stack"/></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/footer.svg"/><img src="assets/footer.svg" alt="Status: building"/></picture>
